@@ -172,7 +172,7 @@ If you need help with deployment, feel free to reach out to the creator or check
 
 This project is created and maintained by:
 
-- **[Lenwy](https://github.com/Rizz-Hosting)*: develover the project
+- **[Rizz](https://github.com/Rizz-Hosting)*: develover the project
 
 Special thanks for the support and contributions throughout the development.
 
