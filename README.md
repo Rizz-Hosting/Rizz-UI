@@ -1,8 +1,8 @@
-# Rynn UI
+# Rizz UI
 
 ![Layout](https://img101.pixhost.to/images/369/551696826_rizz.jpg)
 
-Rynn UI is a simple and easy-to-use API documentation interface built with Express.js. It allows developers to quickly set up and view API documentation with customizable settings using a `settings.json` file. 
+Rizz UI is a simple and easy-to-use API documentation interface built with Express.js. It allows developers to quickly set up and view API documentation with customizable settings using a `settings.json` file. 
 
 ## Features
 - Simple API documentation interface
