@@ -1,6 +1,6 @@
 # Rynn UI
 
-![Layout](https://files.catbox.moe/tot5d8.png)
+![Layout](https://img101.pixhost.to/images/369/551696826_rizz.jpg)
 
 Rynn UI is a simple and easy-to-use API documentation interface built with Express.js. It allows developers to quickly set up and view API documentation with customizable settings using a `settings.json` file. 
 
@@ -14,7 +14,7 @@ Rynn UI is a simple and easy-to-use API documentation interface built with Expre
 
 ## Live Demo
 
-Check out a live demo of Rynn UI [here](https://rynnn-ui.vercel.app)
+Check out a live demo of Rynn UI [here](https://rizz-ui.vercel.app)
 
 ## Setup
 
@@ -24,7 +24,7 @@ Check out a live demo of Rynn UI [here](https://rynnn-ui.vercel.app)
 ### Installation
 1. Clone the repository to your local machine:
    ```bash
-   git clone https://github.com/RynnKunnn/Rynn-UI.git
+   git clone https://github.com/Rizz-Hosting/Rizz-UI.git
    ```
 2. Navigate to the project directory:
    ```bash
@@ -43,13 +43,13 @@ Your API documentation should now be available at `http://localhost:4000`.
 
 ## Customization
 
-![Layout](https://files.catbox.moe/bjazqb.png)
+![Layout](https://img101.pixhost.to/images/369/551696826_rizz.jpg)
 
 You can easily customize the UI by editing the `settings.json` file. Below is a breakdown of the configurable fields:
 
 ### General Settings
 
-- `name`: Sets the name of your API (e.g., "Rynn Api's").
+- `name`: Sets the name of your API (e.g., "Rizz Api's").
 - `version`: Specifies the version of your API interface (e.g., "Rynn UI").
 - `description`: A brief description of your API documentation.
 
@@ -85,8 +85,8 @@ Organize APIs into categories for better navigation:
 Here’s an example of how your settings.json file might look:
 ```json
 {
-  "name": "Rynn Api's",
-  "version": "Rynn UI",
+  "name": "Rizz Api's",
+  "version": "Rizn UI",
   "description": "Simple and Easy-to-Use API Documentation",
   "header": {
     "status": "Online!",
@@ -100,16 +100,16 @@ Here’s an example of how your settings.json file might look:
     }
   },
   "apiSettings": {
-    "creator": "Rynn"
+    "creator": "Rizz"
   },
   "links": [
     {
       "name": "Source Code",
-      "url": "https://github.com/rynxzyy/Rynn-UI"
+      "url": "https://github.com/Rizz-Hosting/Rizz-UI"
     },
     {
       "name": "Contact Me",
-      "url": "https://wa.me/6285173370004"
+      "url": "https://wa.me/6283897845063"
     }
   ],
   "categories": [
@@ -172,9 +172,7 @@ If you need help with deployment, feel free to reach out to the creator or check
 
 This project is created and maintained by:
 
-- **[Rynn](https://github.com/rynxzyy)**: Creator and main developer of the project.
-- **[Lenwy](https://github.com/Lenwyy)**: For the inspiration behind the project.
-- **[Siputzx](https://github.com/siputzx)**: For providing the LuminAI API.
+- **[Lenwy](https://github.com/Rizz-Hosting)*: develover the project
 
 Special thanks for the support and contributions throughout the development.
 
