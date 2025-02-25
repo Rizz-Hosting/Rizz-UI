@@ -28,7 +28,7 @@ Check out a live demo of Rynn UI [here](https://rizz-ui.vercel.app)
    ```
 2. Navigate to the project directory:
    ```bash
-   cd Rynn-UI
+   cd Rizz-UI
    ```
 3. Install dependencies:
    ```bash
