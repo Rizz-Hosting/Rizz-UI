@@ -11,7 +11,7 @@ const {
   generateQRIS,
   createQRIS,
   checkQRISStatus
-} = require('./function/orkut.js')
+} = require('./src/api/orkut/orkut.js')
 
 const app = express();
 const PORT = process.env.PORT || 4000;
