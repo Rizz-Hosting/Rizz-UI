@@ -14,12 +14,12 @@
     }
   },
   "apiSettings": {
-    "creator": "Rizz"
+    "creator": "RizzHosting"
   },
   "links": [
     {
       "name": "Source Code",
-      "url": "https://github.com/Rizz-Hosting/Rizz-UI"
+      "url": "https://github.com/Rizz-Hosting"
     },
     {
       "name": "Contact Me",
@@ -27,6 +27,23 @@
     }
   ],
   "categories": [
+    {
+      "name": "Order Kouta Gateway",
+      "items": [
+        {
+          "name": "Create Payment",
+          "desc": "Create Payment Qris Code",
+          "path": "/api/orkut/createpayment?apikey=&amount=&codeqr="
+          "innerDesc": "Buy Apikey Chat 6283898545125"
+        },
+        {
+          "name": "Cek Status",
+          "desc": "Cek Status Qris",
+          "path": "/api/orkut/cekstatus?apikey=&merchant=&keyorkut=",
+          "innerDesc": "Buy Apikey Chat 6283898545125"
+        }
+      ]
+    },
     {
       "name": "AI (Artificial Intelligence)",
       "items": [
