@@ -3,6 +3,15 @@ const chalk = require('chalk');
 const fs = require('fs');
 const cors = require('cors');
 const path = require('path');
+const {
+  convertCRC16,
+  generateTransactionId,
+  generateExpirationTime,
+  elxyzFile,
+  generateQRIS,
+  createQRIS,
+  checkQRISStatus
+} = require('./function/orkut.js')
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -25,7 +34,7 @@ app.use((req, res, next) => {
         if (data && typeof data === 'object') {
             const responseData = {
                 status: data.status,
-                creator: settings.apiSettings.creator || "Created Using Rynn UI",
+                creator: settings.apiSettings.creator || "Created Using Rizz UI",
                 ...data
             };
             return originalJson.call(this, responseData);
@@ -53,6 +62,54 @@ fs.readdirSync(apiFolder).forEach((subfolder) => {
 });
 console.log(chalk.bgHex('#90EE90').hex('#333').bold(' Load Complete! ✓ '));
 console.log(chalk.bgHex('#90EE90').hex('#333').bold(` Total Routes Loaded: ${totalRoutes} `));
+
+app.get('/api/orkut/createpayment', async (req, res) => {
+    const { apikey, amount } = req.query;
+    if (!apikey) {
+    return res.json("Isi Parameter Apikey.");
+    }
+    const check = global.apikey
+    if (!check.includes(apikey)) return res.json("Apikey Tidak Valid!.")
+    if (!amount) {
+    return res.json("Isi Parameter Amount.")
+    }
+    const { codeqr } = req.query;
+    if (!codeqr) {
+    return res.json("Isi Parameter CodeQr menggunakan qris code kalian.");
+    }
+    try {
+        const qrData = await createQRIS(amount, codeqr);
+        res.json({ status: true, creator: global.creator, result: qrData });        
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+})
+
+
+
+app.get('/api/orkut/cekstatus', async (req, res) => {
+    const { merchant, keyorkut } = req.query;
+        if (!merchant) {
+        return res.json("Isi Parameter Merchant.")
+    }
+    if (!keyorkut) {
+        return res.json("Isi Parameter Keyorkut.");
+    }
+    try {
+        const apiUrl = `https://gateway.okeconnect.com/api/mutasi/qris/${merchant}/${keyorkut}`;
+        const response = await axios.get(apiUrl);
+        const result = await response.data;
+                // Check if data exists and get the latest transaction
+        const latestTransaction = result.data && result.data.length > 0 ? result.data[0] : null;
+                if (latestTransaction) {
+            res.json(latestTransaction);
+        } else {
+            res.json({ message: "No transactions found." });
+        }
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+})
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'api-page', 'index.html'));
